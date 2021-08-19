@@ -12,6 +12,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           ref: master
+          token: ${{ secrets.GITHUB_ACCESS_TOKEN }}
       - name: Remove the triggering release
         run: |
           curl -XDELETE \
